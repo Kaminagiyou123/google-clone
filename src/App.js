@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar";
 
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Gmail from "./components/Gmail";
+import Images from "./components/Images";
+import Account from "./components/Account";
+import Apps from "./components/Apps";
+import Home from "./components/Home";
+import Footer from "./components/Footer";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Home />
+      <Switch>
+        <Route path='/gmail'>
+          <Gmail />
+        </Route>
+        <Route path='/images'>
+          <Images />
+        </Route>
+        <Route path='/apps'>
+          <Apps />
+        </Route>
+        <Route path='/account'>
+          <Account />
+        </Route>
+        <Route path='/'></Route>
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 

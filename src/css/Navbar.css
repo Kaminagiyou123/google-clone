@@ -1,0 +1,39 @@
+.nav-container {
+  overflow: hidden;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  float: right;
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+}
+
+li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+li :hover {
+  text-decoration: underline;
+}
+
+.account-img {
+  width: 40px;
+  border-radius: 100%;
+  margin-top: -10px;
+}
+
+.icon :hover {
+  text-decoration: none;
+  background: #e1e1e1;
+  border: 1px solid #d0d0d0;
+  border-radius: 100%;
+}
